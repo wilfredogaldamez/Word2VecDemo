@@ -25,9 +25,14 @@ app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
+        word = request.form.get('wordSearch')
+        rList = []
+        for word in w2v_model.wv.most_similar(word):
+            print(word)
+            rList.append(word)
         return render_template('index.html', rList = rList)
     else:
-        return render_template('index.html', rList = rList)
+        return render_template('index.html')
 
 
 
