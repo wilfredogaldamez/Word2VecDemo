@@ -14,16 +14,23 @@
 
 
 
-            <div class="field has-addons">
-                <div class="control">
-                    <input class="input" type="text" placeholder="Find a repository">
+            <form method="POST" action=" ">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Find word vectors" name="wordSearch">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            Search
+                        </a>
+                    </div>
+                    <br><br>
+                    <p>{% for x in rList %}
+                        <br>{{ x }}
+                        {% endfor %}
+                    </p>
                 </div>
-                <div class="control">
-                    <a class="button is-info">
-                        Search
-                    </a>
-                </div>
-            </div>
+            </form>
         </div>
     </section>
 </body>
