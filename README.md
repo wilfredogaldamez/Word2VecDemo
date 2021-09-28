@@ -1,6 +1,8 @@
 # Word2Vec Demo
 A demo of Word2Vec. 
 
+![Example Query](./static/example.PNG)
+
 ## How To Install In a Windows Environment
 ```
 git clone https://github.com/wilfredogaldamez/Word2VecDemo.git
